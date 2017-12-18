@@ -74,4 +74,4 @@ For example to work on the one in the `argparse` folder:
     python -m pip install -e .
     greet --help
     python -m greet --help
-    python -m pytest
+    python -m pytest -v

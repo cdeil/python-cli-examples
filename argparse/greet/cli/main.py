@@ -22,15 +22,19 @@ def main(args=None):
     # Parse all command line arguments
     args = parser.parse_args(args)
 
-    # Call the desired subcommand function
-    args.func(args)
-    # print(args)
-    print('this is main')
+    # This is not a good way to handle the cases
+    # where help should be printed.
+    # TODO: there must be a better way?
+    if hasattr(args, 'func'):
+        # Call the desired subcommand function
+        logging.basicConfig(level=args.loglevel.upper())
+        args.func(args)
+        return 0
+    else:
+        parser.print_help()
+        return 0
 
-    logging.basicConfig(level=args.loglevel.upper())
+    # log.debug('some debug')
+    # log.info('some info')
+    # log.warning('some warning')
 
-    log.debug('some debug')
-    log.info('some info')
-    log.warning('some warning')
-
-    return 0

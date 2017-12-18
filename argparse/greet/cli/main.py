@@ -6,7 +6,7 @@ log = logging.getLogger(__name__)
 
 def main(args=None):
 
-    parser = argparse.ArgumentParser(prog='greet', description='I can say hello and bye!')
+    parser = argparse.ArgumentParser(prog='greet', description='Command line interface for the greet package')
     parser.add_argument(
         '--loglevel', default='info', help='Log level',
         choices=['debug', 'info', 'warning', 'error', 'critical'],

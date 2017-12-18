@@ -17,8 +17,13 @@ Using `click.MultiCommand`:
 
 The way this is implemented at the moment, this doesn't do lazy loading!
 
+Maybe try this? https://github.com/click-contrib/click-plugins
+
 For testing see:
 
 * http://click.pocoo.org/dev/testing/
 
-As far as I know, there is not Sphinx plugin.
+For Sphinx see:
+
+* https://github.com/click-contrib/sphinx-click
+
